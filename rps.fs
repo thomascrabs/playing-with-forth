@@ -4,15 +4,22 @@ KEY
 DUP
 CR
 .( You chose: ) EMIT CR
-.s CR
-VARIABLE rnd   HERE rnd !
-: RANDOM  rnd @ 31421 *  6927 +  DUP rnd ! ;
-: CHOOSE  ( u1 -- u2 )  RANDOM UM*  NIP ;
-\ something that produces something more random????? : REALCHOICE  ( n -- ) 0 DO 3 CHOOSE . LOOP ; 
+VARIABLE rnd   HERE rnd ! 
+: RANDOM  rnd @ 3141592621  *  6927 +  DUP rnd ! ;
+: CHOOSE  ( u1 -- u2 )  RANDOM UM*  NIP ; 
+
 3 CHOOSE 
+
+: ?CHECKCOMPUTER
+  DUP 0 = IF DROP 82 ELSE 
+  DUP 1 = IF DROP 80 ELSE 
+  DUP 2 = IF DROP 83 ELSE 
+  THEN THEN THEN ;
+?CHECKCOMPUTER
 DUP
-.s  CR
 .( Computer picked: ) EMIT CR
-\ : CHECKIFSAME ( -- ) = if ." Same value"
-CR
+: ?CHECKMATCH
+  = IF ." That's a draw, try again " CR THEN ; 
+?CHECKMATCH
+.s CR
 bye

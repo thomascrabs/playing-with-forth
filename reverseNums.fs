@@ -4,3 +4,4 @@ swap
 2swap
 swap
 .s CR
+bye
