@@ -24,8 +24,8 @@ DUP
   2DUP 82 = SWAP 83 = SWAP AND IF ." Rock smashes scissors, you lose :(" ELSE 
   2DUP 80 = SWAP 83 = SWAP AND IF ." Scissors cuts paper, you win :)" ELSE 
   2DUP 80 = SWAP 82 = SWAP AND IF ." Rock beats paper, you win :)" ELSE
-  2DUP 83 = SWAP 80 = SWAP AND IF ." SCissors cuts paper, you lose :(" ELSE
-  2DUP 83 = SWAP 82 = SWAP AND IF ." Rock smahes scissors, you win :)" ELSE
+  2DUP 83 = SWAP 80 = SWAP AND IF ." Scissors cuts paper, you lose :(" ELSE
+  2DUP 83 = SWAP 82 = SWAP AND IF ." Rock smashes scissors, you win :)" ELSE
   THEN THEN THEN THEN THEN THEN THEN ; 
 ?CHECKMATCH
 CR
